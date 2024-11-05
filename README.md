@@ -10,6 +10,13 @@ What is it going to do?
 
 It is going to draw people into the art of building a survival pack and have a good time while doing it. It not only helps the person build their bag, but also takes a fun twist to surviving techniques, differing situations (I hope to add a zombie apocalypse one for fun), and the affordability of these items. As a person who has built my own survival pack and am still adding components to it, it can be a perilous journey for others who either don't have the knowledge behind the hard skillsets or have the knowledge, yet unsure of which product is better. It will hopefully give people an idea about what is a prepper or survivalist and shed light onto the specifics of the skillsets that enhance your overall capability when put into a treacherous situation in an unforgiving environment. I hope to educate, give a laugh, and introduce people to the art of surviving! I hope to add some fun buttons that have different functions throughout and make the page pretty interactive. Like discovering what goes in a bag, discover what fun lies within my website! 
 
+Four Pages Outside the Main Landing Page
+Landing Page - Wireframe
+About Page - More information about what the website does. Information concerning survival techniques/why build a bag.
+Scenario Page - Goes over the varying environmental differences for creating a bag including a couple fun ones. 
+Test Your Bag Page - Actually add you items to your bag and receive your survival and affordability ratings
+Expert Survivors Page - Fun page for tips and tricks coming from some of the most well know survivors.
+
 Who is the target audience?
 
 The target audience for this I would say is the general public over a wide range of ages. I hope that there will be a little bit of something for everyone no matter what age. 
