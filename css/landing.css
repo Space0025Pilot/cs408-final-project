@@ -1,0 +1,128 @@
+/* ------------ Main Page CSS ------------ */
+body{
+  background-color: #656119;
+}
+
+h1.second{
+  font-family: monospace;
+  text-align: center;
+}
+/* --------------------------------------------- */
+
+/* ------------ Images CSS ------------ */
+img.survival{
+  margin-left: 20%;
+}
+/* --------------------------------------------- */
+
+/* ------------ Navigation Pane CSS ------------ */
+nav {
+  height: 50px;
+  background-color: ff80ff;
+  display: flex;
+  padding: 1% 0;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 1;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: monospace;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #91E4FB;
+}
+
+nav a:hover {
+  background-color: rgb(139, 76, 233);
+}
+/* --------------------------------------------- */
+
+/* ------------ Table CSS ------------ */
+table {
+  width: 50%;
+  margin: 20px auto;
+  background-color: rgb(56, 185, 241);
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #def;
+}
+/* --------------------------------------------- */
+
+/* ------------ Form and Button CSS ------------ */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-family: monospace;
+  text-align: left;
+}
+
+form.survivortable{
+  display: flex;
+  margin-left: 300px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  text-align: left;
+}
+
+label,input {
+  padding: 1%;
+}
+
+input.ratinginput{
+  width: 10%;
+}
+
+input.nameInput{
+  /* margin-right: 2%; */
+  /* margin-left: 2%; */
+}
+
+label.nameLabel{
+  margin-left: 2%;
+}
+
+button.buttonAdd{
+  /* padding-left: 1%; */
+  margin-left: 2%;
+}
+
+.delete-btn {
+  background-color: rgb(0, 132, 255);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+/* --------------------------------------------- */
