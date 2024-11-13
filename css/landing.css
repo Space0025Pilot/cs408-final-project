@@ -63,7 +63,58 @@ button.tryit:hover {
 }
 /* --------------------------------------------- */
 
-/* ------------ Images CSS ------------ */
+/* ------------ Footer CSS --------------------- */
+.footer{
+  background-color: #656119;
+  text-align: center;
+  display: flex;
+  margin-top: -5%;
+}
+
+.footercolumn1{
+  background-color:#656119;
+  width:30%;
+  margin-left: 20%;
+}
+
+.footercolumn2{
+  background-color:#656119;
+  width:40%;
+}
+
+.footercolumn3{
+  background-color:#656119;
+  width:30%;
+  margin-right: 20%;
+}
+
+img.b1{
+  height: 200px;
+}
+
+img.b2{
+  height: 200px;
+  border-radius: 5%;
+}
+
+img.hh{
+  height: 80px;
+  border-radius: 100%;
+  border: 5px solid black;
+}
+
+p.quote{
+  font-family: monospace;
+  
+}
+
+p.who{
+  font-family: monospace;
+  font-size: medium;
+}
+/* --------------------------------------------- */
+
+/* ------------ Images CSS --------------------- */
 img.survival{
   margin-left: 18%;
   height: auto;
