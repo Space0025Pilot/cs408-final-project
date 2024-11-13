@@ -4,37 +4,102 @@ body{
 }
 
 h1.second{
+  color:#00C8F8;
+  font-size: 30px;
   font-family: monospace;
   text-align: center;
+}
+
+p{
+  color:#C9F1FD;
+}
+
+.columnbox{
+  background-color: #656119;
+  text-align: center;
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.column1box{
+  background-color:#656119;
+  width:60%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 0.5%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.column2box{
+  background-color:#656119;
+  width: 40%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+button.tryit{
+  font-size: 12px;
+  border-radius: 50%;
+  color: white;
+  background-color:darkblue;
+  transition-duration: 0.4s;
+}
+
+button.tryit:hover {
+  background-color: #00C8F8;
+  color: black;
 }
 /* --------------------------------------------- */
 
 /* ------------ Images CSS ------------ */
 img.survival{
   margin-left: 20%;
+  height: auto;
+}
+
+img.man{
+  max-width: 100%;
+  height: auto;
 }
 /* --------------------------------------------- */
 
 /* ------------ Navigation Pane CSS ------------ */
 nav {
-  height: 50px;
+  width: 100%;
   background-color: ff80ff;
-  display: flex;
-  padding: 1% 0;
-  margin-bottom: 10px;
+  margin-left: -20%;
+  margin-right:-20%;
+  overflow: auto;
+
 }
 
 nav ul {
   padding: 0;
   list-style-type: none;
-  flex: 1;
+  flex: 2;
   display: flex;
+  margin-left: 20%;
+  text-align: center;
 }
 
 nav li {
-  display: inline;
-  text-align: center;
-  flex: 1;
+  float: left;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+  /* text-align: center; */
 }
 
 nav a {
@@ -95,21 +160,19 @@ label,input {
 }
 
 input.ratinginput{
-  width: 10%;
+  width: 55%;
 }
 
 input.nameInput{
-  /* margin-right: 2%; */
-  /* margin-left: 2%; */
+  
 }
 
 label.nameLabel{
-  margin-left: 2%;
+  margin-left: -40%;
 }
 
 button.buttonAdd{
-  /* padding-left: 1%; */
-  margin-left: 2%;
+  margin-left: 5%;
 }
 
 .delete-btn {

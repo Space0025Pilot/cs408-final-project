@@ -1,52 +1,72 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/landing.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello Fellow Survivors!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/landing.css">
+  </head>
 
-<body>
-  <img class="survival" src="img/Survival_Logo-overlay.png" alt="Survival Logo" title="Survival Logo">
+  <body>
+    
+    <img class="survival" src="img/Survival_Logo-overlay.png" alt="Survival Logo" title="Survival Logo">
 
-  <nav>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="scenario.html">Scenarios</a></li>
-      <li><a href="bag.html">Test Your Bag</a></li>
-      <li><a href="experts.html">Survival Experts</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="scenario.html">Scenarios</a></li>
+        <li><a href="bag.html">Test Your Bag</a></li>
+        <li><a href="experts.html">Survival Experts</a></li>
+      </ul>
+    </nav>
 
-  <h1 class="second">Become A Survivor Today</h1>
+    <div class="columnbox">
+      <div class="column1box">
+        <h1 class="second">Ever Wonder About Your Survival Chances...</h1>
+        <p>
+          Here is your chance to test your survival bag against various scenarios. Build your bag or input your already constructed bag items into a form to determine your chances.
+        </p>
+        <a href="bag.html">
+          <button class="tryit" href="bag.html">Try it now!</button>
+        </a>
+        <h1 class="second">Become A Survivor Today!</h1>
+        <p>
+          Add yourself to our list of survivors! Enter yourself or get creative and create your surviving alter ego!
+        </p>
 
-  <!-- Input Fields and Buttons-->
-  <form class="survivortable">
-    <label class="nameLabel" for="nameInput">Name: </label>
-    <input class="nameInput" type="text" id="nameInput" placeholder="Enter name">
-    <label for="ratingInput">Rating: </label>
-    <input class="ratinginput" type="number" id="ratingInput" placeholder="Enter rating (1-5)" min="1" max="5">
-    <button class="buttonAdd" onclick="addToTable()">Add to Table</button>
-    <button onclick="clearInputs()">Clear</button>
-  </form>
+        
 
-  <!-- Table -->
-  <table id="ratingTable">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Rating</th>
-        <th>Action</th> <!-- New column for delete button -->
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Rows will be added here -->
-    </tbody>
-  </table>
+        <!-- Input Fields and Buttons-->
+        <form class="survivortable">
+          <label class="nameLabel" for="nameInput">Name: </label>
+          <input class="nameInput" type="text" id="nameInput" placeholder="Enter name">
+          <label for="ratingInput">Rating: </label>
+          <input class="ratinginput" type="number" id="ratingInput" placeholder="Enter rating (1-5)" min="1" max="5">
+          <button class="buttonAdd" onclick="addToTable()">Add Yourself</button>
+          <button onclick="clearInputs()">Clear</button>
+        </form>
 
+        <!-- Table -->
+        <table id="ratingTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Rating</th>
+              <th>Action</th> <!-- New column for delete button -->
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be added here -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="column2box">
+        <img class="man" src="img/survive-8683959_1280.jpg">
+      </div>
+    </div>
     <script>
       // Function to load the table from localStorage
       function loadTableData() {
