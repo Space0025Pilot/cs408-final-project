@@ -1,14 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bag.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survival Bag</title>
+    <meta name="description" content="Test your survival bag">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bag.css">
 </head>
 
 <body>
-    <h1>BAG</h1>
+    <!-- <h1>Test Your Survival Bag</h1> -->
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="scenario.html">Scenarios</a></li>
+        <li><a href="experts.html">Survival Experts</a></li>
+      </ul>
+    </nav>
+    
+    <div class="items">
+      <form id="itemForm">
+          <label class="itemIDLabel" for="itemID">Item ID:</label>
+          <input class="itemIDInput" type="number" id="itemID" placeholder="Item ID" required>
+          <label class="itemNameLabel" for="itemName">Name of Item:</label>
+          <input class="itemNameInput" type="text" id="itemName" placeholder="Item Name" required>
+          <label class="itemRatingLabel" for="itemName">Item Rating:</label>
+          <input class="itemRatingInput" type="number" id="itemPrice" placeholder="Item Rating" required>
+          <button class="s" type="submit" id="send-data">
+            <img class="b3" src="img/backpack3.png">
+          </button>
+          <button class="l" id="load-data">Load Data</button>
+      </form>
+    </div>
+    
+
+    <table summary="Lists the information in the database including: Id, Name, Rating, and Action">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="itemBody">
+          <!-- Items will be dynamically inserted here --> 
+        </tbody>
+      </table>
+
+      
+
+      <script>
+        const apiGatewayURL = "https://zzvaqo2b8l.execute-api.us-west-1.amazonaws.com"
+        document.getElementById("load-data").onclick = function () {
+            const itemBody = document.getElementById("itemBody");
+            let xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", function () {
+                const items = JSON.parse(xhr.response);
+                itemBody.innerHTML = ''; // Clear existing items
+                items.forEach(item => {
+                    addItemToTable(item);
+                });
+            });
+            xhr.open("GET", "https://zzvaqo2b8l.execute-api.us-west-1.amazonaws.com/items"); // Adjust endpoint as necessary
+            xhr.send();
+        }
+        // Function to add an item to the table
+        function addItemToTable(item) {
+            const itemBody = document.getElementById("itemBody");
+            const row = itemBody.insertRow();
+            row.insertCell(0).textContent = item.id;
+            row.insertCell(1).textContent = item.name;
+            row.insertCell(2).textContent = item.price;
+            const deleteCell = row.insertCell(3);
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.onclick = function () { deleteItem(item.id); };
+            deleteCell.appendChild(deleteBtn);
+        }
+        // Delete an item
+        function deleteItem(id) {
+            let xhr = new XMLHttpRequest();
+            xhr.open("DELETE", "https://zzvaqo2b8l.execute-api.us-west-1.amazonaws.com/items/" + id); // Adjust endpoint as necessary
+            xhr.onload = function () {
+                if (xhr.status === 204) {
+                    loadData(); // Reload the items after deleting
+                }
+            };
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send();
+        }
+        //add an item
+        document.getElementById("send-data").onclick = function () {
+            event.preventDefault();
+            const itemID = document.getElementById("itemID").value;
+            const itemName = document.getElementById("itemName").value;
+            const itemPrice = document.getElementById("itemPrice").value;
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("PUT", "https://zzvaqo2b8l.execute-api.us-west-1.amazonaws.com/items");
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onload = function () {
+                if (xhr.status === 201) {
+                    const newItem = JSON.parse(xhr.response);
+                    addItemToTable(newItem);
+                    document.getElementById("itemID").value = '';
+                    document.getElementById("itemName").value = '';
+                    document.getElementById("itemPrice").value = '';
+                    loadData(); // Reload the items after adding
+                }
+            };
+            xhr.send(JSON.stringify({ "id": itemID, "name": itemName, "price": itemPrice }));
+        }
+
+    </script>
 </body>
+
+</html>
