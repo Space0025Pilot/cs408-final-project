@@ -1,6 +1,7 @@
 /* ------------ Main Page CSS ------------ */
 body{
   background-color: #656119;
+  margin: 0%;
 }
 
 h1.second{
@@ -8,7 +9,6 @@ h1.second{
   font-size: 30px;
   font-family: monospace;
   text-align: center;
-  padding-top: 10%;
 }
 
 p{
@@ -65,28 +65,24 @@ button.tryit:hover {
 
 /* ------------ Images CSS ------------ */
 img.survival{
-  margin-left: 30%;
+  margin-left: 18%;
   height: auto;
+  width: auto;
 }
 
 img.man{
-  height: 1000;
-  width:1000px;
+  height: 600px;
 }
 /* --------------------------------------------- */
 
 /* ------------ Navigation Pane CSS ------------ */
 nav {
   background-color: ff80ff;
-  margin-left: -8%;
-  margin-right: -8%;
-
 }
 
 nav ul {
   padding: 0;
   list-style-type: none;
-  margin-left: 20%;
   text-align: center;
   display: flex;
   align-items: center;
@@ -104,7 +100,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: rgb(139, 76, 233);
+  background-color: rgb(17, 122, 227);
 }
 /* --------------------------------------------- */
 
@@ -152,15 +148,28 @@ label,input {
 }
 
 input.ratinginput{
+  height: min-content;
+  margin-top: 5%;
   width: 55%;
 }
 
 input.nameInput{
-  
+  height: min-content;
+  margin-top: 5%;
 }
 
 label.nameLabel{
+  color: rgb(0, 132, 255);
   margin-left: -40%;
+  font-size: larger;
+  margin-top: 5%;
+}
+
+label.ratingLabel{
+  color: rgb(0, 132, 255);
+  margin-left: 2%;
+  font-size: larger;
+  margin-top: 5%;
 }
 
 button.buttonAdd{
