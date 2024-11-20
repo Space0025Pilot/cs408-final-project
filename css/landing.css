@@ -147,7 +147,7 @@ nav a {
   font-family: monospace;
   text-transform: uppercase;
   text-decoration: none;
-  color: #91E4FB;
+  color: #92E5FC;
 }
 
 nav a:hover {
@@ -210,14 +210,14 @@ input.nameInput{
 }
 
 label.nameLabel{
-  color: rgb(0, 132, 255);
+  color: #92E5FC;
   margin-left: -40%;
   font-size: larger;
   margin-top: 5%;
 }
 
 label.ratingLabel{
-  color: rgb(0, 132, 255);
+  color: #92E5FC;
   margin-left: 2%;
   font-size: larger;
   margin-top: 5%;
@@ -228,7 +228,7 @@ button.buttonAdd{
 }
 
 .delete-btn {
-  background-color: rgb(0, 132, 255);
+  background-color: darkblue;
   color: white;
   border: none;
   cursor: pointer;
@@ -241,3 +241,118 @@ button.buttonAdd{
 }
 
 /* --------------------------------------------- */
+
+/* ------------ Media Queries for Responsiveness  ------------ */
+
+/* Small Devices (Mobile) */
+@media (max-width: 600px) {
+  h1.second {
+    font-size: 24px;
+  }
+
+  .columnbox {
+    flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .column1box, .column2box {
+    width: 100%;
+    margin-bottom: 1%;
+  }
+
+  button.tryit {
+    font-size: 10px;
+  }
+
+  nav a {
+    font-size: 1.5rem; /* Smaller text for smaller screens */
+  }
+
+  form.survivortable {
+    margin-left: 10px; /* Adjust form margin */
+    margin-right: 10px; /* Adjust form margin */
+  }
+
+  .footer {
+    flex-direction: column;
+    margin-top: 10%;
+    padding: 15px;
+  }
+
+  .footercolumn1, .footercolumn2, .footercolumn3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1.second {
+    font-size: 28px;
+  }
+
+  .columnbox {
+    flex-direction: row; /* Place columns side by side */
+  }
+
+  .column1box {
+    width: 50%;
+  }
+
+  .column2box {
+    width: 50%;
+  }
+
+  nav ul {
+    flex-direction: row; /* Arrange navigation items horizontally */
+  }
+
+  nav a {
+    font-size: 1.8rem;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footercolumn1, .footercolumn2, .footercolumn3 {
+    width: 30%;
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+  h1.second {
+    font-size: 32px;
+  }
+
+  .column1box {
+    width: 60%;
+  }
+
+  .column2box {
+    width: 40%;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav a {
+    font-size: 2rem;
+  }
+
+  form.survivortable {
+    margin-left: 300px;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .footercolumn1, .footercolumn2, .footercolumn3 {
+    width: 30%;
+  }
+}
