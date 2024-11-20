@@ -1,14 +1,105 @@
 <!doctype html>
-<html>
+<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/about.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <meta name="description" content="Who we are and what we do page">
+    <meta name="author" content="Caitlyn Nelson">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/about.css">
+  </head>
 
-<body>
-    <h1>ABOUT</h1>
-</body>
+  <body>
+      <h1>All About Us</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Homepage</a></li>
+          <li><a href="bag.html">Test Your Bag</a></li>
+          <li><a href="scenario.html">Scenarios</a></li>
+          <li><a href="experts.html">Survival Experts</a></li>
+        </ul>
+      </nav>
+      <div class="box1">
+        <div class="column1b1" tabindex="0">
+          <h1>Who We Are?</h1>
+          <p> We are a guild of survivors that encompass many areas of expertise including our biggest sponsor, The Kiramman Family! Our focus is to bring awareness to the basic survival concepts and encourage people to learn and enhance their skillsets. We hope that at the very least you learn a little something and have fun with it. At the very best join us and become a true survivor for any scenario!</p>
+          
+        </div>
+
+        <div class="column2b1" tabindex="0">
+          <h1>Whose at the Top?</h1>
+          <p> We are lead by a council of Survival Experts in the field! Most notably, Caitlyn Kiramman, who is our active sharpshooter and weapon safety trainer! If you are interested in more council members please check out our Survival Experts!</p>
+        </div>
+      </div>
+
+      <div class="box2">
+        <div class="column1b2" tabindex="0">
+          <h1> Rule of 3</h1>
+          <p> Skillsets for this field are vast, however by taking the top four surviving principles, you will make it to the next day. Remember, Shelter then Water then Fire!</p>
+        </div>
+
+        <div class="column2b2" tabindex="0">
+          <h1> Join Us!</h1>
+          <p> We'd be delighted to have you! Go ahead and subscribe to our Newletter that goes out twice a month! Also, add yourself to the survivor table on the Homepage! </p>
+        </div>
+      </div>
+
+      <h2>Subscribe to our Newsletter</h2>
+
+      <form id="emailForm" onsubmit="captureEmail(event)">
+          <label class="emailLabel" for="email">Enter your email address:</label>
+          <input class="emailInput" type="email" id="email" name="email" placeholder="Email Address" required>
+          <button class="emailButton" type="submit">Submit</button>
+          <p class="res" id="result"></p> <!-- Display the result here -->
+      </form>
+
+      <div class="footer">
+        <div class="footercolumn1">
+          <img class="b1" src="img/backpack1.png" alt="Survival Backpack">
+        </div>
+        <div class="footercolumn2">
+          <p class="quote">
+            <i>Sometimes you have to be the one to stand up and help yourself.</i> 
+          </p>
+          <img class="hh" src="img/ceo.png" alt="Two hands one reaching for the other handing a life vest.">
+          <p class="who">
+            The Helping Hand, CEO of Survival Inc.
+          </p>
+          <br>
+          <p class="copy">
+            Copyright © 2024 Survival Inc.
+          </p>
+        </div>
+        <div class="footercolumn3">
+          <img class="b2" src="img/backpack2.jpg" alt="Survival supplies laid out like a picnic.">
+        </div>
+      </div>
+  </body>
+
+
+  <script>
+      function captureEmail(event) {
+          event.preventDefault(); // Prevent the form from submitting the traditional way
+
+          // Get the email value from the input field
+          const email = document.getElementById('email').value;
+
+          // Check if the email is valid (optional: but you can add custom validation if needed)
+          const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+          if (!emailPattern.test(email)) {
+              alert("Please enter a valid email address.");
+              return; // Stop the function if the email is not valid
+          }
+
+          // Display the captured email (You can process this email as needed)
+          document.getElementById('result').textContent = "Confirmation of email acceptance! Thank you " + email + "! Our next newsletter is December 15th!";
+
+          // Optionally, you can send the email using AJAX (for server-side processing)
+          // For now, we will just log it in the console
+          console.log("Captured email:", email);
+      }
+  </script>
+</html>

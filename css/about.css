@@ -1,0 +1,343 @@
+/* ------------ Main Page CSS ------------ */
+
+body{
+    background-color: rgb(3, 17, 55);
+    margin: 0%;
+}
+
+h1{
+    font-size: 60px;
+    color: #92E5FC;
+    font-family: monospace;
+    font-weight: lighter;
+    text-align: center;
+}
+
+h2{
+    font-size: 60px;
+    color: #92E5FC;
+    font-family: monospace;
+    font-weight: lighter;
+    text-align: center;
+}
+
+img.symbol{
+    height: 500px;
+    margin-left: 5%;
+}
+
+.box1{
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  .column1b1{
+    background-image: url('/img/ksymbol.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    width:50%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+
+  .column1b1 h1{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column1b1 p{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1rem;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column1b1:hover,
+  .column1b1:focus {
+    box-shadow: 0 0 0 200px rgb(3, 17, 55) inset;
+  }
+
+  .column1b1:hover h1,
+  .column1b1:focus h1 {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .column1b1:hover p,
+  .column1b1:focus p {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .column2b1{
+    background-image: url('/img/cait.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+
+  .column2b1 h1{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column2b1 p{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1rem;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column2b1:hover,
+  .column2b1:focus {
+    box-shadow: 0 0 0 200px rgb(3, 17, 55) inset;
+  }
+
+  .column2b1:hover h1,
+  .column2b1:focus h1 {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .column2b1:hover p,
+  .column2b1:focus p {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .box2{
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  .column1b2{
+    background-image: url('/img/ruleof3.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    width:50%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+
+  .column1b2 h1{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column1b2 p{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1rem;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column1b2:hover,
+  .column1b2:focus {
+    box-shadow: 0 0 0 200px rgb(3, 17, 55) inset;
+  }
+
+  .column1b2:hover h1,
+  .column1b2:focus h1 {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .column1b2:hover p,
+  .column1b2:focus p {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .column2b2{
+    background-image: url('/img/survivors.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+
+  .column2b2 h1{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column2b2 p{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1rem;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column2b2:hover,
+  .column2b2:focus {
+    box-shadow: 0 0 0 200px rgb(3, 17, 55) inset;
+  }
+
+  .column2b2:hover h1,
+  .column2b2:focus h1 {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .column2b2:hover p,
+  .column2b2:focus p {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+/* --------------------------------------------- */
+
+/* ------------ Navigation Pane CSS ------------ */
+  
+  nav ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  nav a {
+    display: inline-block;
+    font-size: 2rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #92E5FC;
+  }
+  
+  nav a:hover {
+    background-color: rgb(3, 43, 152);
+  }
+  /* --------------------------------------------- */
+
+  /* -------------- Newsletter CSS -------------- */
+
+  label.emailLabel {
+    color: #92E5FC;
+    margin-left: 35%;
+  }
+
+  button.emailButton {
+    background-color: #92E5FC;
+  }
+
+  p.res {
+    text-align: center;
+    color: #92E5FC;
+  }
+  /* --------------------------------------------- */
+
+  /* ------------ Footer CSS --------------------- */
+.footer{
+    text-align: center;
+    display: flex;
+    margin-top: 2%;
+  }
+  
+  .footercolumn1{
+    width:30%;
+    margin-left: 20%;
+  }
+  
+  .footercolumn2{
+    width:40%;
+  }
+  
+  .footercolumn3{
+    width:30%;
+    margin-right: 20%;
+  }
+  
+  img.b1{
+    height: 200px;
+  }
+  
+  img.b2{
+    height: 200px;
+    border-radius: 5%;
+  }
+  
+  img.hh{
+    height: 80px;
+    border-radius: 100%;
+    border: 5px solid black;
+  }
+  
+  p.quote{
+    font-family: monospace;
+    color: #92E5FC;
+    
+  }
+  
+  p.who{
+    font-family: monospace;
+    font-size: medium;
+    color: #92E5FC;
+  }
+
+  p.copy{
+    font-family: monospace;
+    color: #92E5FC;
+  }
+  /* --------------------------------------------- */
