@@ -1,0 +1,627 @@
+/* ------------ Main Page CSS ------------ */
+body{
+    background-color: #730202;
+    margin: 0%;
+  }
+
+h1{
+    font-size: 60px;
+    color: #F18383;
+    font-family: monospace;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.box1{
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.column1b1 {    
+  background-image: url('/img/desert.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  width:50%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 0.5%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.column1b1 h1{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    color: #F18383;
+    font-family: monospace;
+  }
+
+  .column1b1:hover,
+  .column1b1:focus {
+    box-shadow: 0 0 0 200px #730202 inset;
+  }
+
+  .column1b1:hover h1,
+  .column1b1:focus h1 {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+.column2b1 {
+  background-color: #F18383;
+  width: 50%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.column2b1 h1 {
+    font-size: 24px;
+    font-family: monospace;
+    color: black;
+}
+
+.column2b1 p {
+    font-size: 18px;
+    font-family: monospace;
+    color: black;
+}
+
+.box2 {
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.column1b2 {    
+  background-color: #F18383;
+  width:50%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 0.5%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.column1b2 h1 {
+    font-size: 24px;
+    font-family: monospace;
+    color: black;
+}
+
+.column1b2 p {
+    font-size: 15px;
+    font-family: monospace;
+    color: black;
+}
+
+.column2b2 {
+  background-image: url('/img/forest.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  width: 50%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.column2b2 h1{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    color: #F18383;
+    font-family: monospace;
+  }
+
+  .column2b2 p{
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1rem;
+    color: #92E5FC;
+    font-family: monospace;
+  }
+
+  .column2b2:hover,
+  .column2b2:focus {
+    box-shadow: 0 0 0 200px #730202 inset;
+  }
+
+  .column2b2:hover h1,
+  .column2b2:focus h1 {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .column2b2:hover p,
+  .column2b2:focus p {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+.box3 {
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.column1b3 {    
+    background-image: url('/img/ocean.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    width:50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+  
+  .column1b3 h1{
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.8s;
+      color: #F18383;
+      font-family: monospace;
+    }
+  
+    .column1b3 p{
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.8s;
+      font-size: 1rem;
+      color: #92E5FC;
+      font-family: monospace;
+    }
+  
+    .column1b3:hover,
+    .column1b3:focus {
+      box-shadow: 0 0 0 200px #730202 inset;
+    }
+  
+    .column1b3:hover h1,
+    .column1b3:focus h1 {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+    .column1b3:hover p,
+    .column1b3:focus p {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+.column2b3 {
+    background-color: #F18383;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+    
+.column2b3 h1 {
+    font-size: 24px;
+    font-family: monospace;
+    color: black;
+}
+
+.column2b3 p {
+    font-size: 14px;
+    font-family: monospace;
+    color: black;
+}
+
+.box4 {
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.column1b4 {    
+    background-color: #F18383;
+    width:50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+  
+  .column1b4 h1 {
+      font-size: 24px;
+      font-family: monospace;
+      color: black;
+  }
+  
+  .column1b4 p {
+      font-size: 14px;
+      font-family: monospace;
+      color: black;
+  }
+  
+  .column2b4 {
+    background-image: url('/img/artic.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+  
+  .column2b4 h1{
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.8s;
+      color: #F18383;
+      font-family: monospace;
+    }
+  
+    .column2b4 p{
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.8s;
+      font-size: 1rem;
+      color: #92E5FC;
+      font-family: monospace;
+    }
+  
+    .column2b4:hover,
+    .column2b4:focus {
+      box-shadow: 0 0 0 200px #730202 inset;
+    }
+  
+    .column2b4:hover h1,
+    .column2b4:focus h1 {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+    .column2b4:hover p,
+    .column2b4:focus p {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+.box5 {
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.column1b5 {    
+    background-image: url('/img/natural.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    width:50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+  
+  .column1b5 h1{
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.8s;
+      color: #F18383;
+      font-family: monospace;
+    }
+  
+    .column1b5 p{
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.8s;
+      font-size: 1rem;
+      color: #92E5FC;
+      font-family: monospace;
+    }
+  
+    .column1b5:hover,
+    .column1b5:focus {
+      box-shadow: 0 0 0 200px #730202 inset;
+    }
+  
+    .column1b5:hover h1,
+    .column1b5:focus h1 {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+    .column1b5:hover p,
+    .column1b5:focus p {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+  .column2b5 {
+    background-color: #F18383;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+  
+  .column2b5 h1 {
+      font-size: 24px;
+      font-family: monospace;
+      color: black;
+  }
+  
+  .column2b5 p {
+      font-size: 14px;
+      font-family: monospace;
+      color: black;
+  }
+
+.box6 {
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.column1b6 {    
+    background-color: #F18383;
+    width:50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+  
+  .column1b6 h1 {
+      font-size: 24px;
+      font-family: monospace;
+      color: black;
+  }
+  
+  .column1b6 p {
+      font-size: 14px;
+      font-family: monospace;
+      color: black;
+  }
+  
+  .column2b6 {
+    background-image: url('/img/zombie.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+  
+  .column2b6 h1{
+      opacity: 0;
+      transform: scale(0);
+      transition: 0.8s;
+      color: #F18383;
+      font-family: monospace;
+    }
+  
+    .column2b6 p{
+        opacity: 0;
+        transform: scale(0);
+        transition: 0.8s;
+        font-size: 1rem;
+        color: #92E5FC;
+        font-family: monospace;
+    }
+
+    .column2b6:hover,
+    .column2b6:focus {
+        box-shadow: 0 0 0 200px #730202 inset;
+    }
+
+    .column2b6:hover h1,
+    .column2b6:focus h1 {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .column2b6:hover p,
+    .column2b6:focus p {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .box7 {
+        text-align: center;
+        display: flex;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .column1b7,
+    .column2b7,
+    .column3b7,
+    .column4b7,
+    .column5b7,
+    .column6b7 {
+        background-color: #F18383;
+        width:22%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-right: 0.5%;
+        margin-left: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 3%;
+        padding-bottom: 5%;
+    }
+
+    .column1b7 h1,
+    .column2b7 h1,
+    .column3b7 h1,
+    .column4b7 h1,
+    .column5b7 h1,
+    .column6b7 h1 {
+      font-size: 22px;
+      font-family: monospace;
+      color: black;
+    }
+
+    .column1b7 p,
+    .column2b7 p,
+    .column3b7 p,
+    .column4b7 p,
+    .column5b7 p,
+    .column6b7 p {
+      font-size: 12px;
+      font-family: monospace;
+      color: black;
+    }
+
+
+
+/* --------------------------------------------- */
+
+/* ------------ Navigation Pane CSS ------------ */
+  
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+  }
+  
+  nav a {
+    display: inline-block;
+    font-size: 2rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F18383;
+  }
+  
+  nav a:hover {
+    background-color: rgb(88, 2, 2);
+  }
+  /* --------------------------------------------- */
+
+  /* ------------ Footer CSS --------------------- */
+.footer{
+    text-align: center;
+    display: flex;
+    margin-top: 2%;
+  }
+  
+  .footercolumn1{
+    width:30%;
+    margin-left: 20%;
+  }
+  
+  .footercolumn2{
+    width:40%;
+  }
+  
+  .footercolumn3{
+    width:30%;
+    margin-right: 20%;
+  }
+  
+  img.b1{
+    height: 200px;
+  }
+  
+  img.b2{
+    height: 200px;
+    border-radius: 5%;
+  }
+  
+  img.hh{
+    height: 80px;
+    border-radius: 100%;
+    border: 5px solid black;
+  }
+  
+  p.quote{
+    font-family: monospace;
+    color: #F18383;
+    
+  }
+  
+  p.who{
+    font-family: monospace;
+    font-size: medium;
+    color: #F18383;
+  }
+
+  p.copy{
+    font-family: monospace;
+    color: #F18383;
+  }
+  /* --------------------------------------------- */
