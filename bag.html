@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <!-- <h1>Test Your Survival Bag</h1> -->
 
     <nav>
       <ul>
@@ -22,7 +21,19 @@
         <li><a href="experts.html">Survival Experts</a></li>
       </ul>
     </nav>
+
+    <h1>Step 1: How to Use</h1>
+
+    <h1>Step 2: Find Your Survival Items From the List</h1>
+    <div class="list">
+      <input class="sInput" type="text"  id="searchInput" placeholder="Search for an item...">
+      
+      <ul class="itemsList" id="itemsList">
+        <!-- List of survival items will go here -->
+      </ul>
+    </div>
     
+    <h1>Step 3: Add Items to Your Bag</h1>
     <div class="items">
       <form id="itemForm">
           <label class="itemIDLabel" for="itemID">Item ID:</label>
@@ -53,23 +64,105 @@
         </tbody>
       </table>
 
+      <h1>Step 4: Receive Your Survival Bag Rating</h1>
+      <div class="r" id="average-rating">
+        <!-- The average rating will be dynamically inserted here -->
+      </div>
+
+      <h1>Step 5: Your Likelihood to Survive With Your Bag</h1>
+      <div class="sl" id="survival-likelihood">
+        <!-- Missing items will be dynamically displayed here -->
+      </div>
+
+      <h1>Step 6: Survival Likelihood Low? Are You Missing Pertinent Items?</h1>
+      <div class="m" id="missing-items">
+        <!-- Missing items will be dynamically displayed here -->
+      </div>
+
       
 
       <script>
         const apiGatewayURL = "https://zzvaqo2b8l.execute-api.us-west-1.amazonaws.com"
         document.getElementById("load-data").onclick = function () {
             const itemBody = document.getElementById("itemBody");
+            const missingItemsElement = document.getElementById("missing-items");
+            const survivalLikelihoodElement = document.getElementById("survival-likelihood");
             let xhr = new XMLHttpRequest();
             xhr.addEventListener("load", function () {
                 const items = JSON.parse(xhr.response);
                 itemBody.innerHTML = ''; // Clear existing items
+                let totalRating = 0;
+                let hasWater = false;
+                let hasFood = false;
+                let hasShelter = false;
+
                 items.forEach(item => {
                     addItemToTable(item);
+                    totalRating += parseFloat(item.price);
+
+                    // Check if the items include 'water' and 'food'
+                    if (item.name.toLowerCase() === "water") {
+                        hasWater = true;
+                    }
+                    if (item.name.toLowerCase() === "food") {
+                        hasFood = true;
+                    }
+                    if (item.name.toLowerCase() === "shelter") {
+                        hasShelter = true;
+                    }
+                    
                 });
+
+                const rating = totalRating;
+                displayAverageRating(rating, hasWater, hasFood, hasShelter);
+                displayMissingItems(hasWater, hasFood, hasShelter);
+                displaySurvivalLikelihood(rating, hasWater, hasFood, hasShelter);
             });
             xhr.open("GET", "https://zzvaqo2b8l.execute-api.us-west-1.amazonaws.com/items"); // Adjust endpoint as necessary
             xhr.send();
         }
+        
+        // Function to display the average rating
+        function displayAverageRating(averageRating, hasWater, hasFood, hasShelter) {
+            const ratingElement = document.getElementById("average-rating");
+            if (ratingElement) {
+
+              // Adjust the color based on the good bag or not
+              if (hasWater && hasFood && hasShelter) {
+                  ratingElement.style.color = "green"; // High likelihood (safe)
+                  ratingElement.style.backgroundColor = "#d4edda"; // Light green background
+              } else if (hasWater && hasFood || hasWater && hasShelter || hasFood && hasShelter) {
+                  ratingElement.style.color = "orange"; // Moderate likelihood (warning)
+                  ratingElement.style.backgroundColor = "#fff3cd"; // Light yellow background
+              } else {
+                  ratingElement.style.color = "red"; // Low likelihood (danger)
+                  ratingElement.style.backgroundColor = "#f8d7da"; // Light red background
+              }
+
+              ratingElement.textContent = "Overall Bag Rating: " + averageRating.toFixed(2);
+
+
+            } else {
+                // If no element exists, create one and append it to the body or a specific div
+                const newRatingElement = document.createElement("div");
+                newRatingElement.id = "average-rating";
+                newRatingElement.textContent = "Overall Bag Rating: " + averageRating.toFixed(2);
+                document.body.appendChild(newRatingElement); // Or append to another container
+
+                // Adjust the color based on the good bag or not
+                if (hasWater && hasFood && hasShelter) {
+                    ratingElement.style.color = "green"; // High likelihood (safe)
+                    ratingElement.style.backgroundColor = "#d4edda"; // Light green background
+                } else if (hasWater && hasFood) {
+                    ratingElement.style.color = "orange"; // Moderate likelihood (warning)
+                    ratingElement.style.backgroundColor = "#fff3cd"; // Light yellow background
+                } else {
+                    ratingElement.style.color = "red"; // Low likelihood (danger)
+                    ratingElement.style.backgroundColor = "#f8d7da"; // Light red background
+                }
+            }
+        }
+
         // Function to add an item to the table
         function addItemToTable(item) {
             const itemBody = document.getElementById("itemBody");
@@ -118,7 +211,100 @@
             xhr.send(JSON.stringify({ "id": itemID, "name": itemName, "price": itemPrice }));
         }
 
+         // Function to display missing items (water and food)
+        function displayMissingItems(hasWater, hasFood, hasShelter) {
+            const missingItemsElement = document.getElementById("missing-items");
+            missingItemsElement.innerHTML = ""; // Clear previous missing items
+
+            if (!hasWater) {
+                const waterMessage = document.createElement("p");
+                waterMessage.textContent = "!! Missing: Water !!";
+                missingItemsElement.appendChild(waterMessage);
+
+                // Add image for missing water --- this works currently
+                const waterImage = document.createElement("img");
+                waterImage.src = 'img/nowater.jpg'; // Replace with the path to your water image
+                waterImage.alt = "Missing Water";
+                waterImage.width = 100;
+                missingItemsElement.appendChild(waterImage);
+            }
+            if (!hasFood) {
+                const foodMessage = document.createElement("p");
+                foodMessage.textContent = "!! Missing: Food !!";
+                missingItemsElement.appendChild(foodMessage);
+
+                // Add image for missing food
+                // const foodImage = document.createElement("img");
+                // foodImage.src = "img/missing_food.png"; // Replace with the path to your food image
+                // foodImage.alt = "Missing Food";
+                // missingItemsElement.appendChild(foodImage);
+            }
+            if (!hasShelter) {
+                const shelterMessage = document.createElement("p");
+                shelterMessage.textContent = "!! Missing: Shelter !!";
+                missingItemsElement.appendChild(shelterMessage);
+
+                // Add image for missing food
+                // const foodImage = document.createElement("img");
+                // foodImage.src = "img/missing_food.png"; // Replace with the path to your food image
+                // foodImage.alt = "Missing Food";
+                // missingItemsElement.appendChild(foodImage);
+            }
+
+            // If both are missing, show both messages
+            if (hasWater && hasFood && hasShelter) {
+                missingItemsElement.textContent = "No missing items.";
+            }
+        }
+
+        // Function to display survival likelihood based on rating and missing items
+        function displaySurvivalLikelihood(averageRating, hasWater, hasFood, hasShelter) {
+            const survivalLikelihoodElement = document.getElementById("survival-likelihood");
+            let survivalLikelihood = averageRating;
+
+            // Subtract 20% for missing water or food or shelter
+            if (!hasWater) {
+                survivalLikelihood -= 20;
+            }
+            if (!hasFood) {
+                survivalLikelihood -= 20;
+            }
+            if (!hasShelter) {
+                survivalLikelihood -= 20;
+            }
+
+            // Add 10% for having water or food or shelter
+            if (hasWater) {
+                survivalLikelihood += 10;
+            }
+            if (hasFood) {
+                survivalLikelihood += 10;
+            }
+            if (hasShelter) {
+                survivalLikelihood += 10;
+            }
+
+            // Ensure survival likelihood is between 0 and 100
+            survivalLikelihood = Math.max(0, Math.min(100, survivalLikelihood));
+
+            // Adjust the color based on the survival likelihood
+            if (survivalLikelihood >= 70) {
+                survivalLikelihoodElement.style.color = "green"; // High likelihood (safe)
+                survivalLikelihoodElement.style.backgroundColor = "#d4edda"; // Light green background
+            } else if (survivalLikelihood >= 40) {
+                survivalLikelihoodElement.style.color = "orange"; // Moderate likelihood (warning)
+                survivalLikelihoodElement.style.backgroundColor = "#fff3cd"; // Light yellow background
+            } else {
+                survivalLikelihoodElement.style.color = "red"; // Low likelihood (danger)
+                survivalLikelihoodElement.style.backgroundColor = "#f8d7da"; // Light red background
+            }
+
+            // Display the survival likelihood
+            survivalLikelihoodElement.textContent = "Survival Likelihood: " + survivalLikelihood + "%";
+        }
+
     </script>
+    <script src="/js/bag.js"></script>
 </body>
 
 </html>

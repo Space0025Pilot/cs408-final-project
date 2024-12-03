@@ -1,13 +1,56 @@
 body{
-    background-color: #656119;
+    background-color: #005DD6;
     margin: 0%;
   }
+
+h1 {
+  color: #00FBFF;
+  text-align: center;
+  font-family: monospace;
+}
+
+div.list {
+  margin-left: 45%;
+  font-family: monospace;
+}
+
+ul.itemsList {
+    list-style-type: none; 
+    color: #EFDCDC;
+    margin-left: -12%;
+    font-size: 16px;
+}
+
+.rating {
+    font-weight: bold;
+}
+
+div.r {
+  text-align: center;
+  color: #EFDCDC;
+  font-family: monospace;
+  font-size: 2rem;
+}
+
+div.m {
+  text-align: center;
+  color: #EFDCDC;
+  font-family: monospace;
+  font-size: 2rem;
+}
+
+div.sl {
+  text-align: center;
+  color: #EFDCDC;
+  font-family: monospace;
+  font-size: 2rem;
+}
 
   /* ------------ Table CSS ------------ */
 table {
     width: 50%;
     margin: 20px auto;
-    background-color: rgb(56, 185, 241);
+    background-color: #B5ECFC;
     border-collapse: collapse;
   }
   
@@ -21,7 +64,7 @@ table {
   }
   
   tbody tr:nth-child(odd) {
-    background-color: #def;
+    background-color: #EFDCDC;
   }
   /* --------------------------------------------- */
 
@@ -43,7 +86,7 @@ table {
     font-family: monospace;
     text-transform: uppercase;
     text-decoration: none;
-    color: #92E5FC;
+    color: #EFDCDC;
   }
   
   nav a:hover {
@@ -56,7 +99,7 @@ table {
   }
 
   button.s{
-    background-color: #92E5FC;
+    background-color: #B5ECFC;
     transition-duration: 0.4s;
     margin-left: 2%;
   }
@@ -68,7 +111,7 @@ table {
   }
 
   button.l{
-    background-color: #92E5FC;
+    background-color: #EFDCDC;
     transition-duration: 0.4s;
     margin-left: 1%;
   }
@@ -97,15 +140,15 @@ table {
   }
 
   label.itemIDLabel{
-    color: #92E5FC;
+    color: #EFDCDC;
   }
 
   label.itemNameLabel{
-    color: #92E5FC;
+    color: #EFDCDC;
     margin-left: 1%;
   }
 
   label.itemRatingLabel{
     margin-left: 1%;
-    color: #92E5FC;
+    color: #EFDCDC;
   }
