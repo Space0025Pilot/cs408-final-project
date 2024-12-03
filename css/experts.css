@@ -1,0 +1,198 @@
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    font-size: 60px;
+    color: #266E52;
+    font-family: monospace;
+    font-weight: lighter;
+    text-align: center;
+}
+
+/* ------------ Navigation Pane CSS ------------ */
+  
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 2rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #266E52;
+}
+
+nav a:hover {
+    background-color: #415ED2;
+}
+/* --------------------------------------------- */
+
+/*-----------------Body Elements ----------------*/
+  .box1{
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    cursor: pointer;
+  }
+
+    .column1b1 {    
+        background-color: black;
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        width:50%;
+        margin-top: 1%;
+        margin-right: 0.5%;
+        margin-left: 1%;
+    }
+
+    img {
+        width: auto;
+        height: 505px;
+    }
+
+    .column2b1 {    
+        background-color: aquamarine;
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        width:50%;
+        margin-top: 1%;
+        margin-right: 0.5%;
+        margin-left: 1%;
+    }
+
+    .box2{
+    text-align: center;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    cursor: pointer;
+    }
+
+    .column2b2 {    
+        background-color: black;
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        width:50%;
+        margin-top: 1%;
+        margin-right: 0.5%;
+        margin-left: 1%;
+    }
+
+    img {
+        width: auto;
+        height: 505px;
+    }
+
+    .column1b2 {    
+        background-color: aquamarine;
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        width:50%;
+        margin-top: 1%;
+        margin-right: 0.5%;
+        margin-left: 1%;
+    }
+
+    .box3{
+        text-align: center;
+        display: flex;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        cursor: pointer;
+      }
+    
+        .column1b3 {    
+            background-color: black;
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+            width:50%;
+            margin-top: 1%;
+            margin-right: 0.5%;
+            margin-left: 1%;
+        }
+    
+        img {
+            width: auto;
+            height: 505px;
+        }
+    
+        .column2b3 {    
+            background-color: aquamarine;
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+            width:50%;
+            margin-top: 1%;
+            margin-right: 0.5%;
+            margin-left: 1%;
+        }
+
+/*----------------------------------------------*/
+
+/* ------------ Footer CSS --------------------- */
+.footer{
+    text-align: center;
+    display: flex;
+    margin-top: 2%;
+  }
+  
+  .footercolumn1{
+    width:30%;
+    margin-left: 20%;
+  }
+  
+  .footercolumn2{
+    width:40%;
+  }
+  
+  .footercolumn3{
+    width:30%;
+    margin-right: 20%;
+  }
+  
+  img.b1{
+    height: 200px;
+  }
+  
+  img.b2{
+    height: 200px;
+    border-radius: 5%;
+  }
+  
+  img.hh{
+    height: 80px;
+    border-radius: 100%;
+    border: 5px solid black;
+  }
+  
+  p.quote{
+    font-family: monospace;
+    color: #266E52;
+    
+  }
+  
+  p.who{
+    font-family: monospace;
+    font-size: medium;
+    color: #266E52;
+  }
+
+  p.copy{
+    font-family: monospace;
+    color: #266E52;
+  }
+  /* --------------------------------------------- */

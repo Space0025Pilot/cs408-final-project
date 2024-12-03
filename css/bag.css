@@ -46,6 +46,13 @@ div.sl {
   font-size: 2rem;
 }
 
+div.how{
+  text-align: center;
+  color: #EFDCDC;
+  font-family: monospace;
+  font-size: 20px;
+}
+
   /* ------------ Table CSS ------------ */
 table {
     width: 50%;
@@ -152,3 +159,57 @@ table {
     margin-left: 1%;
     color: #EFDCDC;
   }
+
+  /* ------------ Footer CSS --------------------- */
+.footer{
+  text-align: center;
+  display: flex;
+  margin-top: 2%;
+}
+
+.footercolumn1{
+  width:30%;
+  margin-left: 20%;
+}
+
+.footercolumn2{
+  width:40%;
+}
+
+.footercolumn3{
+  width:30%;
+  margin-right: 20%;
+}
+
+img.b1{
+  height: 200px;
+}
+
+img.b2{
+  height: 200px;
+  border-radius: 5%;
+}
+
+img.hh{
+  height: 80px;
+  border-radius: 100%;
+  border: 5px solid black;
+}
+
+p.quote{
+  font-family: monospace;
+  color: #92E5FC;
+  
+}
+
+p.who{
+  font-family: monospace;
+  font-size: medium;
+  color: #92E5FC;
+}
+
+p.copy{
+  font-family: monospace;
+  color: #92E5FC;
+}
+/* --------------------------------------------- */

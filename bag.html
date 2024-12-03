@@ -23,6 +23,11 @@
     </nav>
 
     <h1>Step 1: How to Use</h1>
+    <div class="how">
+        <p>Choose from the list of survival items below that match the items in your survival bag.</p>
+        <p>Enter each item along with its ID and rating then add it to your bag.</p> 
+        <p>You shall see you corresponding bag rating and your likelihood of survival with the current items in your bag.</p>
+    </div>
 
     <h1>Step 2: Find Your Survival Items From the List</h1>
     <div class="list">
@@ -79,6 +84,28 @@
         <!-- Missing items will be dynamically displayed here -->
       </div>
 
+      <div class="footer">
+        <div class="footercolumn1">
+          <img class="b1" src="img/backpack1.png" alt="Survival Backpack">
+        </div>
+        <div class="footercolumn2">
+          <p class="quote">
+            <i>Sometimes you have to be the one to stand up and help yourself.</i> 
+          </p>
+          <img class="hh" src="img/ceo.png" alt="Two hands one reaching for the other handing a life vest.">
+          <p class="who">
+            The Helping Hand, CEO of Survival Inc.
+          </p>
+          <br>
+          <p class="copy">
+            Copyright © 2024 Survival Inc.
+          </p>
+        </div>
+        <div class="footercolumn3">
+          <img class="b2" src="img/backpack2.jpg" alt="Survival supplies laid out like a picnic.">
+        </div>
+      </div>
+
       
 
       <script>
@@ -100,7 +127,7 @@
                     addItemToTable(item);
                     totalRating += parseFloat(item.price);
 
-                    // Check if the items include 'water' and 'food'
+                    // Check if the items include 'water' and 'food' and 'shelter'
                     if (item.name.toLowerCase() === "water") {
                         hasWater = true;
                     }
@@ -233,11 +260,12 @@
                 foodMessage.textContent = "!! Missing: Food !!";
                 missingItemsElement.appendChild(foodMessage);
 
-                // Add image for missing food
-                // const foodImage = document.createElement("img");
-                // foodImage.src = "img/missing_food.png"; // Replace with the path to your food image
-                // foodImage.alt = "Missing Food";
-                // missingItemsElement.appendChild(foodImage);
+                //Add image for missing food
+                const foodImage = document.createElement("img");
+                foodImage.src = "img/nofood.jpg"; // Replace with the path to your food image
+                foodImage.alt = "Missing Food";
+                foodImage.width = 100;
+                missingItemsElement.appendChild(foodImage);
             }
             if (!hasShelter) {
                 const shelterMessage = document.createElement("p");
@@ -245,10 +273,11 @@
                 missingItemsElement.appendChild(shelterMessage);
 
                 // Add image for missing food
-                // const foodImage = document.createElement("img");
-                // foodImage.src = "img/missing_food.png"; // Replace with the path to your food image
-                // foodImage.alt = "Missing Food";
-                // missingItemsElement.appendChild(foodImage);
+                const shelterImage = document.createElement("img");
+                shelterImage.src = "img/noshelter.jpg"; // Replace with the path to your food image
+                shelterImage.alt = "Missing Shelter";
+                shelterImage.width = 100;
+                missingItemsElement.appendChild(shelterImage);
             }
 
             // If both are missing, show both messages

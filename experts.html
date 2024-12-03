@@ -1,14 +1,119 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Survival Experts</title>
+  <meta name="description" content="Survival Experts page with advice for different scenarios">
+  <meta name="author" content="Caitlyn Nelson">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/experts.css">
 </head>
 
 <body>
-    <h1>Experts</h1>
+    <h1>Survival Experts</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="bag.html">Test Your Bag</a></li>
+        <li><a href="scenario.html">Scenarios</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="box1">
+      <div class="column1b1" tabindex="0">
+
+        <!-- Image element -->
+        <img src="img/caitlyn.jpg" alt="Caitlyn Kiramman" class="hover-image" data-audio="c.mp3">
+
+        <!-- Audio element -->
+        <audio id="audio" preload="auto"></audio>
+
+      </div>
+      <div class="column2b1" tabindex="0">
+        <h1> Caitlyn </h1>
+        <p>About Caitlyn</p>
+      </div>
+    </div>
+
+    <div class="box2">
+      <div class="column1b2" tabindex="0">
+
+        <h1> Ellie </h1>
+        <p>About Ellie</p>
+
+      </div>
+      <div class="column2b2" tabindex="0">
+
+        <!-- Image element -->
+        <img src="img/ellie.jpg" alt="Ellie Williams" class="hover-image" data-audio="e.mp3">
+
+        <!-- Audio element -->
+        <audio id="audio" preload="auto"></audio>
+
+      </div>
+    </div>
+
+    <div class="box3">
+      <div class="column1b3" tabindex="0">
+
+        <!-- Image element -->
+        <img src="img/rick.jpg" alt="Rick Grimes" class="hover-image" data-audio="r.mp3">
+
+        <!-- Audio element -->
+        <audio id="audio" preload="auto"></audio>
+
+      </div>
+      <div class="column2b3" tabindex="0">
+        <h1> Rick </h1>
+        <p>About Rick</p>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <div class="footercolumn1">
+        <img class="b1" src="img/backpack1.png" alt="Survival Backpack">
+      </div>
+      <div class="footercolumn2">
+        <p class="quote">
+          <i>Sometimes you have to be the one to stand up and help yourself.</i> 
+        </p>
+        <img class="hh" src="img/ceo.png" alt="Two hands one reaching for the other handing a life vest.">
+        <p class="who">
+          The Helping Hand, CEO of Survival Inc.
+        </p>
+        <br>
+        <p class="copy">
+          Copyright © 2024 Survival Inc.
+        </p>
+      </div>
+      <div class="footercolumn3">
+        <img class="b2" src="img/backpack2.jpg" alt="Survival supplies laid out like a picnic.">
+      </div>
+    </div>
+
+    <script>
+      // Get all images with class 'hover-image'
+      const images = document.querySelectorAll('.hover-image');
+        const audio = document.getElementById('audio');
+
+        // Loop through each image and add event listeners
+        images.forEach(image => {
+            image.addEventListener('mouseover', function() {
+                // Get the audio file from the data attribute
+                const audioFile = image.getAttribute('data-audio');
+                audio.src = audioFile;  // Set the audio source
+                audio.play();  // Play the audio
+            });
+
+            image.addEventListener('mouseout', function() {
+                audio.pause();  // Pause the audio
+                audio.currentTime = 0;  // Reset the audio to the beginning
+            });
+        });
+    </script>
 </body>
