@@ -36,110 +36,138 @@ nav a:hover {
 /* --------------------------------------------- */
 
 /*-----------------Body Elements ----------------*/
-  .box1{
+.box1{
+  text-align: center;
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  cursor: pointer;
+}
+
+.column1b1 {    
+    background-color: black;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width:50%;
+    margin-top: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+}
+
+img {
+    width: auto;
+    height: 505px;
+}
+
+.column2b1 {    
+    background-color: aquamarine;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width:50%;
+    margin-top: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+}
+
+.box2{
+text-align: center;
+display: flex;
+margin-top: 1%;
+margin-bottom: 1%;
+cursor: pointer;
+}
+
+.column2b2 {    
+    background-color: black;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width:50%;
+    margin-top: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+}
+
+img {
+    width: auto;
+    height: 505px;
+}
+
+.column1b2 {    
+    background-color: aquamarine;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width:50%;
+    margin-top: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+}
+
+.box3{
     text-align: center;
     display: flex;
     margin-top: 1%;
     margin-bottom: 1%;
     cursor: pointer;
   }
-
-    .column1b1 {    
-        background-color: black;
-        background-position: center;
-        background-size: auto;
-        background-repeat: no-repeat;
-        width:50%;
-        margin-top: 1%;
-        margin-right: 0.5%;
-        margin-left: 1%;
-    }
-
-    img {
-        width: auto;
-        height: 505px;
-    }
-
-    .column2b1 {    
-        background-color: aquamarine;
-        background-position: center;
-        background-size: auto;
-        background-repeat: no-repeat;
-        width:50%;
-        margin-top: 1%;
-        margin-right: 0.5%;
-        margin-left: 1%;
-    }
-
-    .box2{
-    text-align: center;
-    display: flex;
+    
+.column1b3 {    
+    background-color: black;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width:50%;
     margin-top: 1%;
-    margin-bottom: 1%;
-    cursor: pointer;
-    }
+    margin-right: 0.5%;
+    margin-left: 1%;
+}
 
-    .column2b2 {    
-        background-color: black;
-        background-position: center;
-        background-size: auto;
-        background-repeat: no-repeat;
-        width:50%;
-        margin-top: 1%;
-        margin-right: 0.5%;
-        margin-left: 1%;
-    }
-
-    img {
-        width: auto;
-        height: 505px;
-    }
-
-    .column1b2 {    
-        background-color: aquamarine;
-        background-position: center;
-        background-size: auto;
-        background-repeat: no-repeat;
-        width:50%;
-        margin-top: 1%;
-        margin-right: 0.5%;
-        margin-left: 1%;
-    }
-
-    .box3{
-        text-align: center;
-        display: flex;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        cursor: pointer;
-      }
+img {
+    width: auto;
+    height: 505px;
+}
     
-        .column1b3 {    
-            background-color: black;
-            background-position: center;
-            background-size: auto;
-            background-repeat: no-repeat;
-            width:50%;
-            margin-top: 1%;
-            margin-right: 0.5%;
-            margin-left: 1%;
-        }
-    
-        img {
-            width: auto;
-            height: 505px;
-        }
-    
-        .column2b3 {    
-            background-color: aquamarine;
-            background-position: center;
-            background-size: auto;
-            background-repeat: no-repeat;
-            width:50%;
-            margin-top: 1%;
-            margin-right: 0.5%;
-            margin-left: 1%;
-        }
+.column2b3 {    
+    background-color: aquamarine;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width:50%;
+    margin-top: 1%;
+    margin-right: 0.5%;
+    margin-left: 1%;
+}
+
+h1.tips{
+  font-size: 40px;
+  color: #266E52;
+  font-family: monospace;
+  font-weight: lighter;
+  text-align: center;
+}
+
+h1.tip{
+  font-size: 20px;
+  color: #266E52;
+  font-family: monospace;
+  font-weight: lighter;
+  text-align: center;
+}
+
+p.quotes{
+  font-size: 16px;
+  color: #266E52;
+  font-family: monospace;
+  font-weight: lighter;
+}
+
+img.hover-image{
+  width: auto;
+  height: 600px;
+}
 
 /*----------------------------------------------*/
 
